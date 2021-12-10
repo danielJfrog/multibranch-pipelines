@@ -8,15 +8,14 @@ pipelines:
         type: Matrix
         stepMode: Bash
         configuration:
-          multiNode: true
-          stepletMultipliers:
-            environmentVariables:
-              {{ range $i, $e := until 100 }}
-              - foo: "bar{{$i}}"
-              {{ end }}
-        configuration:
           runtime:
             type: host
+          multiNode: true
+        stepletMultipliers:
+          environmentVariables:
+            {{ range $i, $e := until 100 }}
+            - foo: "bar{{$i}}"
+            {{ end }}
         execution:
           onExecute:
             - echo hi
