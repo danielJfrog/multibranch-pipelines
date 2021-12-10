@@ -9,11 +9,11 @@ pipelines:
         stepMode: Bash
         configuration:
           multiNode: true
-        stepletMultipliers:
-          environmentVariables:
-            {{ range $i, $e := until 100 }}
-            - foo: "bar{{$i}}"
-            {{ end }}
+          stepletMultipliers:
+            environmentVariables:
+              {{ range $i, $e := until 100 }}
+              - foo: "bar{{$i}}"
+              {{ end }}
         configuration:
           runtime:
             type: host
