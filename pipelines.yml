@@ -12,7 +12,7 @@ resources:
 pipelines:
   - name: testcron
     steps:
-      {{ range $i, $e := until 1 }}
+      {{ range $i+1, $e := until 2 }}
       - name: basic{{$i}}
         type: Bash
         configuration:
