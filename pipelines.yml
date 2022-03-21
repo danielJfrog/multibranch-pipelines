@@ -11,6 +11,7 @@ resources:
 
 pipelines:
   - name: testcron
+    {{ range $i, $e := until 5 }}
     steps:
       - name: basic
         type: Bash
@@ -18,9 +19,8 @@ pipelines:
           runtime:
             type: host
           inputResources:
-          {{ range $i, $e := until 5 }}
             - name: monitor_cron_trigger{{$i}}
-          {{ end }}
         execution:
           onExecute:
             - echo hi
+    {{ end }}
