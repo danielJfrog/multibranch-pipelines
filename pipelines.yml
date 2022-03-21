@@ -17,15 +17,10 @@ pipelines:
         configuration:
           inputSteps:
             - name: ag_step_1
-          runtime:
-            type: host
-          inputResources:
-            - name: monitor_cron_trigger{{$i}}
         execution:
           onExecute:
             - echo hi
 
-      {{ range $i, $e := until 1 }}
       - name: basic2
         type: Bash
         configuration:
@@ -38,4 +33,3 @@ pipelines:
         execution:
           onExecute:
             - echo hi
-      {{ end }}
