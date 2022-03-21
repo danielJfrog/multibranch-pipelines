@@ -32,3 +32,11 @@ pipelines:
         execution:
           onExecute:
             - echo hi
+      - name: basic2
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: basic0
+        execution:
+          onExecute:
+            - echo hi
