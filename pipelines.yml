@@ -2,7 +2,7 @@ template: true
 valuesFilePath: ./values.yml
 
 resources:
-  {{ range $i+1, $e := until 5 }}
+  {{ range $i, $e := until 5 }}
   - name: monitor_cron_trigger{{$i}}
     type: CronTrigger
     configuration:
@@ -13,13 +13,13 @@ pipelines:
   - name: testcron
     steps:
       {{ range $i, $e := until 1 }}
-      - name: basic{{$i+1}}
+      - name: basic{{$i}}
         type: Bash
         configuration:
           runtime:
             type: host
           inputResources:
-            - name: monitor_cron_trigger{{$i+1}}
+            - name: monitor_cron_trigger{{$i}}
         execution:
           onExecute:
             - echo hi
