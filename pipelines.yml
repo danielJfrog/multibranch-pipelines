@@ -11,7 +11,7 @@ resources:
 
 pipelines:
   - name: testcron
-    {{ range $i, $e := until 5 }}
+    {{ range $i, $e := until 1 }}
     steps:
       - name: basic
         type: Bash
