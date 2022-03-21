@@ -24,3 +24,11 @@ pipelines:
           onExecute:
             - echo hi
       {{ end }}
+      - name: basic1
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: basic0
+        execution:
+          onExecute:
+            - echo hi
