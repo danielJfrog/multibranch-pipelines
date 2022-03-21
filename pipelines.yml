@@ -12,20 +12,10 @@ resources:
 pipelines:
   - name: testcron
     steps:
-      - name: basic1
+      {{ range $i, $e := until 2 }}
+      - name: basic{{$i}}
         type: Bash
         configuration:
-          inputSteps:
-            - name: ag_step_1
-        execution:
-          onExecute:
-            - echo hi
-
-      - name: basic2
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: basic1
           runtime:
             type: host
           inputResources:
@@ -33,3 +23,4 @@ pipelines:
         execution:
           onExecute:
             - echo hi
+    {{ end }}
