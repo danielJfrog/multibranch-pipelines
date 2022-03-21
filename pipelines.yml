@@ -11,9 +11,9 @@ resources:
 
 pipelines:
   - name: testcron
-    {{ range $i, $e := until 1 }}
+    {{ range $i, $e := until 2 }}
     steps:
-      - name: basic
+      - name: basic{{$i}}
         type: Bash
         configuration:
           runtime:
