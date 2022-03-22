@@ -4,7 +4,7 @@ valuesFilePath: ./values.yml
 pipelines:
   - name: testcron
     steps:
-      - name: basic{{$i}}
+      - name: basic
         type: Bash
         execution:
           onExecute:
