@@ -13,7 +13,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: basic0
+            - name: basic
         execution:
           onExecute:
             - echo hi
