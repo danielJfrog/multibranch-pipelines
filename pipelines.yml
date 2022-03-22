@@ -1,34 +1,19 @@
 template: true
 valuesFilePath: ./values.yml
 
-resources:
-  {{ range $i, $e := until 5 }}
-  - name: monitor_cron_trigger{{$i}}
-    type: CronTrigger
-    configuration:
-      interval: '*/5 * * * *' # Every 5 minutes
-  {{ end }}
-
 pipelines:
   - name: testcron
     steps:
-      - name: basicly
+      - name: basic{{$i}}
         type: Bash
-        configuration:
-          runtime:
-            type: host
-          inputResources:
-            - name: monitor_cron_trigger1
         execution:
           onExecute:
             - echo hi
-      {{ range $i, $e := until 10000 }}
-      - name: basic{{$i}}
+      - name: basic1
         type: Bash
         configuration:
           inputSteps:
-            - name: basicly
+            - name: basic0
         execution:
           onExecute:
             - echo hi
-      {{ end }}
