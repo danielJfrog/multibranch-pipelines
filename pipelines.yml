@@ -18,7 +18,7 @@ pipelines:
           runtime:
             type: host
           inputResources:
-            - name: monitor_cron_trigger{{$i}}
+            - name: monitor_cron_trigger1
         execution:
           onExecute:
             - echo hi
