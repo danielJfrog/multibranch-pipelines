@@ -12,7 +12,7 @@ resources:
 pipelines:
   - name: testcron
     steps:
-      - name: basic0
+      - name: basicly
         type: Bash
         configuration:
           runtime:
@@ -27,7 +27,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: basic0
+            - name: basicly
         execution:
           onExecute:
             - echo hi
