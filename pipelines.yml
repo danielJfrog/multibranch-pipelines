@@ -12,8 +12,7 @@ resources:
 pipelines:
   - name: testcron
     steps:
-      {{ range $i, $e := until 1 }}
-      - name: basic{{$i}}
+      - name: basic0
         type: Bash
         configuration:
           runtime:
@@ -23,7 +22,7 @@ pipelines:
         execution:
           onExecute:
             - echo hi
-      {{ end }}
+      {{ range $i, $e := until 1 }}
       - name: basic1
         type: Bash
         configuration:
@@ -32,11 +31,4 @@ pipelines:
         execution:
           onExecute:
             - echo hi
-      - name: basic2
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: basic0
-        execution:
-          onExecute:
-            - echo hi
+      {{ end }}
