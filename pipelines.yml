@@ -23,7 +23,7 @@ pipelines:
           onExecute:
             - echo hi
       {{ range $i, $e := until 1 }}
-      - name: basic1
+      - name: basic{{$i}}
         type: Bash
         configuration:
           inputSteps:
