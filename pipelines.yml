@@ -1,19 +1,22 @@
 template: true
 valuesFilePath: ./values.yml
 
+
 pipelines:
   - name: testcron
     steps:
-      - name: basic
+      - name: basicly
         type: Bash
         execution:
           onExecute:
             - echo hi
-      - name: basic1
+      {{ range $i, $e := until 10000 }}
+      - name: basic{{$i}}
         type: Bash
         configuration:
           inputSteps:
-            - name: basic
+            - name: basicly
         execution:
           onExecute:
             - echo hi
+      {{ end }}
