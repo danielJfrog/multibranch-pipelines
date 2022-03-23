@@ -10,8 +10,7 @@ pipelines:
         execution:
           onExecute:
             - echo hi
-      {{ range $i, $e := until 3000 }}
-      - name: basic{{$i}}
+      - name: basic
         type: Bash
         configuration:
           inputSteps:
@@ -19,4 +18,3 @@ pipelines:
         execution:
           onExecute:
             - echo hi
-      {{ end }}
