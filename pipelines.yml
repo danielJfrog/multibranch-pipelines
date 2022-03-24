@@ -10,11 +10,31 @@ pipelines:
         execution:
           onExecute:
             - echo hi
-      - name: step2
-        type: Bash
+      {{ range $i, $e := until 1000 }}
+      - name: basic{{$i}}
+        type: Matrix
+        stepMode: Bash
         configuration:
-          inputSteps:
-            - name: step1
+          multiNode: true
+        stepletMultipliers:
+          environmentVariables:
+            - foo: "foo"
+            - foo: "bar"
+            - foo: "baz"
+          runtimes:
+            - type: image
+              image:
+                auto:
+                  language: node
+                  versions:
+                    - 8.16.0
+            - type: image
+              image:
+                auto:
+                  language: node
+                  versions:
+                    - 12.14.0
         execution:
           onExecute:
-            - echo hi
+            - echo $foo
+      {{ end }}
