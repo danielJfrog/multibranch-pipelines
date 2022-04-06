@@ -5,36 +5,18 @@ valuesFilePath: ./values.yml
 pipelines:
   - name: testcron
     steps:
-      - name: step1
+      - name: basicly
         type: Bash
         execution:
           onExecute:
             - echo hi
-      {{ range $i, $e := until 2 }}
+      {{ range $i, $e := until 3 }}
       - name: basic{{$i}}
-        type: Matrix
-        stepMode: Bash
+        type: Bash
         configuration:
-          multiNode: true
-        stepletMultipliers:
-          environmentVariables:
-            - foo: "foo"
-            - foo: "bar"
-            - foo: "baz"
-          runtimes:
-            - type: image
-              image:
-                auto:
-                  language: node
-                  versions:
-                    - 8.16.0
-            - type: image
-              image:
-                auto:
-                  language: node
-                  versions:
-                    - 12.14.0
+          inputSteps:
+            - name: basicly
         execution:
           onExecute:
-            - echo $foo
+            - echo hi
       {{ end }}
