@@ -10,7 +10,7 @@ pipelines:
         execution:
           onExecute:
             - echo hi
-      {{ range $i, $e := until 100 }}
+      {{ range $i, $e := until 700 }}
       - name: basic{{$i}}
         type: Bash
         configuration:
