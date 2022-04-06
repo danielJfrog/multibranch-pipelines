@@ -1,0 +1,22 @@
+template: true
+valuesFilePath: ./values.yml
+
+
+pipelines:
+  - name: testcron2
+    steps:
+      - name: basicly
+        type: Bash
+        execution:
+          onExecute:
+            - echo hi
+      {{ range $i, $e := until 3 }}
+      - name: basic{{$i}}
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      {{ end }}
