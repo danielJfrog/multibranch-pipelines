@@ -21,12 +21,36 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag5
+  - name: myPropertyBag6
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-
+  - name: myPropertyBag7
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag8
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag9
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag10
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag11
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
 pipelines:
   - name: testcron2
     steps:
@@ -45,6 +69,12 @@ pipelines:
             - name: myPropertyBag3
             - name: myPropertyBag4
             - name: myPropertyBag5
+            - name: myPropertyBag6
+            - name: myPropertyBag7
+            - name: myPropertyBag8
+            - name: myPropertyBag9
+            - name: myPropertyBag10
+            - name: myPropertyBag11
           inputSteps:
             - name: basicly
         execution:
