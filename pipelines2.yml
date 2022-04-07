@@ -21,6 +21,11 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: myPropertyBag5
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
   - name: myPropertyBag6
     type: PropertyBag
     configuration:
@@ -42,11 +47,6 @@ resources:
       commitSha: 1
       runID: 1
   - name: myPropertyBag10
-    type: PropertyBag
-    configuration:
-      commitSha: 1
-      runID: 1
-  - name: myPropertyBag11
     type: PropertyBag
     configuration:
       commitSha: 1
@@ -74,7 +74,6 @@ pipelines:
             - name: myPropertyBag8
             - name: myPropertyBag9
             - name: myPropertyBag10
-            - name: myPropertyBag11
           inputSteps:
             - name: basicly
         execution:
