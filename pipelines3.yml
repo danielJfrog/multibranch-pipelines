@@ -97,7 +97,7 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
-  - name: msgBuildInfo
+  - name: msgBuildInfo1
     type: PropertyBag
     configuration:
       commitSha: 1
@@ -165,6 +165,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
+            - name: msgBuildInfo1
+          outputResources:
             - name: msgBuildInfo
           inputSteps:
             - name: msg
