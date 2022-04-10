@@ -1,58 +1,80 @@
-name: pipelines_build
-configuration:
-  environmentVariables:
-    readOnly:
-      buildPlaneVersion: 0.0.0-m000
-      COMMONS_VERSION: 7.31.6
-      CHART_VERSION_OVERRIDE: ''
-      e2eImageName: jfpip.jfrog.io/jfrog/pipelines-automation-e2e
-      dockerVersion: 20.10.9
-      dockerComposeVersion: 1.27.4
-      npmRegistry: 'https://entplus.jfrog.io/artifactory/api/npm/npm-virtual'
-      repo21: 'https://entplus.jfrog.io'
-      rtRegistry: pipelines-docker
-      SKIP_STEP_STATUS_UPDATE: 'true'
-      templateTarget: pipelines-artifacts/template
-      XRAY_ENABLED: 'true'
-      XRAY_FAIL_PIPELINES: 'true'
-  integrations:
-    - name: docker_jfrog_io_reader
-    - name: entplus_jfrog_io_docker
-    - name: entplus_pipelines
-    - name: jfdev_agent
-    - name: slack_dev_foundation_alerts
-    - name: slack_platform_clean_pipeline
-    - name: slack_platform_release_pipeline
-steps:
-  - name: trigger_controlplane_builds
-    type: Bash
+template: true
+valuesFilePath: ./values.yml
+resources:
+  - name: myPropertyBag1
+    type: PropertyBag
     configuration:
-      inputResources:
-        - name: releasesFile
-    execution:
-      onStart:
-        - echo "kicking off all install builds"
-        - add_run_variables will_publish_bi="true"
-  - name: automation_e2e_build
-    type: Bash
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag2
+    type: PropertyBag
     configuration:
-      environmentVariables:
-        JFROG_CLI_BUILD_NAME: pipelines-automation-e2e
-        JFROG_CLI_BUILD_NUMBER: '${run_id}'
-      integrations:
-        - name: entplus_deployer
-        - name: dockerDotJfrog
-      inputResources:
-        - name: auto_e2e_gitRepo
-      inputSteps:
-        - name: trigger_controlplane_builds
-    execution:
-      onStart:
-        - pushd $res_auto_e2e_gitRepo_resourcePath/
-        - >-
-          add_run_variables RELEASE_VERSION=$( ./normalizeReleaseVersion.sh
-          master )
-        - pushd automation/e2e
-        - 'docker build -t $e2eImageName:$RELEASE_VERSION .'
-        - 'jfrog rt docker-push $e2eImageName:$RELEASE_VERSION $rtRegistry'
-        - popd
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag3
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag4
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag5
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag6
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag7
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag8
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag9
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag10
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+pipelines:
+  - name: testcron2
+    steps:
+      - name: basicly
+        type: Bash
+        execution:
+          onExecute:
+            - echo hi
+      - name: basic2
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag1
+            - name: myPropertyBag2
+            - name: myPropertyBag3
+            - name: myPropertyBag4
+            - name: myPropertyBag5
+            - name: myPropertyBag6
+            - name: myPropertyBag7
+            - name: myPropertyBag8
+            - name: myPropertyBag9
+            - name: myPropertyBag10
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
