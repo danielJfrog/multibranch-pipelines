@@ -117,8 +117,6 @@ pipelines:
             - name: myPropertyBag1
           inputSteps:
             - name: basicly
-          integrations:
-            - name: entArt
         execution:
           onExecute:
             - echo hi
