@@ -100,11 +100,9 @@ resources:
   - name: msgBuildInfo
     type: BuildInfo
     configuration:
-      commitSha: 1
-      runID: 1
       sourceArtifactory: entArt
-        buildName: '${run_id}'
-        buildNumber: '${run_id}'
+      buildName: '${run_id}'
+      buildNumber: '${run_id}'
 pipelines:
   - name: testcron3
     steps:
