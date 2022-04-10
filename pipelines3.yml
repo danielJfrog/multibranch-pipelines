@@ -164,8 +164,6 @@ pipelines:
       - name: msg_publish
         type: Bash
         configuration:
-          inputResources:
-            - name: msgBuildInfo1
           outputResources:
             - name: msgBuildInfo1
           inputSteps:
