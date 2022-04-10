@@ -335,9 +335,9 @@ pipelines:
             - name: redisBuildInfo
             - name: vaultInitBuildInfo
             - name: wwwGit
-            - name: vault_clam_scan
           inputSteps:
             - name: msg_clam_scan
+            - name: vault_clam_scan
         execution:
           onExecute:
             - echo hi
