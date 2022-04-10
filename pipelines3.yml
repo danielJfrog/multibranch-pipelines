@@ -107,6 +107,11 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: myPropertyBag21
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
   - name: templateFS
     type: PropertyBag
     configuration:
@@ -258,6 +263,16 @@ pipelines:
         configuration:
           inputResources:
             - name: templateFS
+          inputSteps:
+            - name: template_build
+        execution:
+          onExecute:
+            - echo hi
+      - name: template_sonar_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag21
           inputSteps:
             - name: template_build
         execution:
