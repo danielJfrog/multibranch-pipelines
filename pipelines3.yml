@@ -253,13 +253,13 @@ pipelines:
         execution:
           onExecute:
             - echo hi
-      - name: template_build
+      - name: micro_build
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag5
+            - name: templateFS
           inputSteps:
-            - name: basicly
+            - name: template_build
         execution:
           onExecute:
             - echo hi
