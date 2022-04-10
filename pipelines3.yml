@@ -36,19 +36,13 @@ pipelines:
         execution:
           onExecute:
             - echo hi
-      {{ range $i, $e := until 4 }}
-      - name: basic{{$i}}
+      - name: automation_e2e_build
         type: Bash
         configuration:
           inputResources:
             - name: myPropertyBag1
-            - name: myPropertyBag2
-            - name: myPropertyBag3
-            - name: myPropertyBag4
-            - name: myPropertyBag5
           inputSteps:
             - name: basicly
         execution:
           onExecute:
             - echo hi
-      {{ end }}
