@@ -57,6 +57,16 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: myPropertyBag12
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag13
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
 pipelines:
   - name: testcron3
     steps:
@@ -112,6 +122,36 @@ pipelines:
             - name: myPropertyBag11
           inputSteps:
             - name: msg
+        execution:
+          onExecute:
+            - echo hi
+      - name: redis
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag12
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: redis
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag12
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: redis_publish
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag13
+          inputSteps:
+            - name: redis
         execution:
           onExecute:
             - echo hi
