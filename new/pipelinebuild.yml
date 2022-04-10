@@ -1,0 +1,51 @@
+name: pipelines_build
+configuration:
+  environmentVariables:
+    readOnly:
+      buildPlaneVersion: 0.0.0-m000
+      COMMONS_VERSION: 7.31.6
+      CHART_VERSION_OVERRIDE: ''
+      e2eImageName: jfpip.jfrog.io/jfrog/pipelines-automation-e2e
+      dockerVersion: 20.10.9
+      dockerComposeVersion: 1.27.4
+      npmRegistry: 'https://entplus.jfrog.io/artifactory/api/npm/npm-virtual'
+      repo21: 'https://entplus.jfrog.io'
+      rtRegistry: pipelines-docker
+      SKIP_STEP_STATUS_UPDATE: 'true'
+      templateTarget: pipelines-artifacts/template
+      XRAY_ENABLED: 'true'
+      XRAY_FAIL_PIPELINES: 'true'
+  integrations:
+    - name: docker_jfrog_io_reader
+    - name: entplus_jfrog_io_docker
+    - name: entplus_pipelines
+    - name: jfdev_agent
+    - name: slack_dev_foundation_alerts
+    - name: slack_platform_clean_pipeline
+    - name: slack_platform_release_pipeline
+steps:
+  - name: trigger_controlplane_builds
+    type: Bash
+    configuration:
+      inputResources:
+        - name: releasesFile
+    execution:
+      onStart:
+        - echo "kicking off all install builds"
+        - add_run_variables will_publish_bi="true"
+  - name: automation_e2e_build
+    type: Bash
+    configuration:
+      environmentVariables:
+        JFROG_CLI_BUILD_NAME: pipelines-automation-e2e
+        JFROG_CLI_BUILD_NUMBER: '${run_id}'
+      integrations:
+        - name: entplus_deployer
+        - name: dockerDotJfrog
+      inputResources:
+        - name: auto_e2e_gitRepo
+      inputSteps:
+        - name: trigger_controlplane_builds
+    execution:
+      onStart:
+        - echo "kicking off all install builds"
