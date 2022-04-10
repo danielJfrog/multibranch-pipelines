@@ -67,6 +67,11 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: myPropertyBag14
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
 pipelines:
   - name: testcron3
     steps:
@@ -155,6 +160,16 @@ pipelines:
         execution:
           onExecute:
             - echo hi
+      - name: vault_publish
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag14
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
       - name: template_build
         type: Bash
         configuration:
@@ -175,6 +190,16 @@ pipelines:
         execution:
           onExecute:
             - echo hi
+      - name: vault_init_publish
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag15
+          inputSteps:
+            - name: vault_init
+        execution:
+          onExecute:
+            - echo hi
       - name: postgres
         type: Bash
         configuration:
@@ -182,6 +207,16 @@ pipelines:
             - name: myPropertyBag7
           inputSteps:
             - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: postgres_publish
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag16
+          inputSteps:
+            - name: postgres
         execution:
           onExecute:
             - echo hi
