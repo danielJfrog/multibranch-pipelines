@@ -103,7 +103,7 @@ resources:
       commitSha: 1
       runID: 1
 pipelines:
-  - name: testcron3
+  - name: testcron4
     steps:
       - name: basicly
         type: Bash
