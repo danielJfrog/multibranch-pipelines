@@ -67,12 +67,12 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag14
+  - name: wwwGit
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: wwwGit
+  - name: vaultInitBuildInfo
     type: PropertyBag
     configuration:
       commitSha: 1
@@ -98,6 +98,11 @@ resources:
       commitSha: 1
       runID: 1
   - name: msg
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag20
     type: PropertyBag
     configuration:
       commitSha: 1
@@ -214,10 +219,20 @@ pipelines:
       - name: vault_publish
         type: Bash
         configuration:
-          inputResources:
-            - name: myPropertyBag14
+          outputResources:
+            - name: wwwGit
           inputSteps:
             - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: vault_clam_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag20
+          inputSteps:
+            - name: vault_publish
         execution:
           onExecute:
             - echo hi
@@ -245,7 +260,7 @@ pipelines:
         type: Bash
         configuration:
           outputResources:
-            - name: wwwGit
+            - name: vaultInitBuildInfo
           inputSteps:
             - name: vault_init
         execution:
@@ -318,7 +333,9 @@ pipelines:
             - name: cpGit
             - name: msg
             - name: redisBuildInfo
+            - name: vaultInitBuildInfo
             - name: wwwGit
+            - name: vault_clam_scan
           inputSteps:
             - name: msg_clam_scan
         execution:
