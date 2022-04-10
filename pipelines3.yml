@@ -72,7 +72,7 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag15
+  - name: wwwGit
     type: PropertyBag
     configuration:
       commitSha: 1
@@ -244,8 +244,8 @@ pipelines:
       - name: vault_init_publish
         type: Bash
         configuration:
-          inputResources:
-            - name: myPropertyBag15
+          outputResources:
+            - name: wwwGit
           inputSteps:
             - name: vault_init
         execution:
@@ -318,6 +318,7 @@ pipelines:
             - name: cpGit
             - name: msg
             - name: redisBuildInfo
+            - name: wwwGit
           inputSteps:
             - name: msg_clam_scan
         execution:
