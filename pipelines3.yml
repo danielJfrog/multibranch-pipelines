@@ -97,7 +97,7 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
-  - name: msgBuildInfo
+  - name: msg
     type: PropertyBag
     configuration:
       commitSha: 1
