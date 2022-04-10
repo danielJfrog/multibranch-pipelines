@@ -62,7 +62,7 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag13
+  - name: redisBuildInfo
     type: PropertyBag
     configuration:
       commitSha: 1
@@ -194,8 +194,8 @@ pipelines:
       - name: redis_publish
         type: Bash
         configuration:
-          inputResources:
-            - name: myPropertyBag13
+          outputResources:
+            - name: redisBuildInfo
           inputSteps:
             - name: redis
         execution:
@@ -317,6 +317,7 @@ pipelines:
           inputResources:
             - name: cpGit
             - name: msg
+            - name: redisBuildInfo
           inputSteps:
             - name: msg_clam_scan
         execution:
