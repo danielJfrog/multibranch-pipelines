@@ -52,6 +52,11 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: myPropertyBag11
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
 pipelines:
   - name: testcron3
     steps:
@@ -97,6 +102,13 @@ pipelines:
             - name: myPropertyBag3
           inputSteps:
             - name: basicly
+      - name: msg_publish
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag11
+          inputSteps:
+            - name: msg
         execution:
           onExecute:
             - echo hi
