@@ -97,8 +97,8 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
-  - name: msgBuildInfo1
-    type: PropertyBag
+  - name: msgBuildInfo
+    type: BuildInfo
     configuration:
       commitSha: 1
       runID: 1
@@ -165,7 +165,7 @@ pipelines:
         type: Bash
         configuration:
           outputResources:
-            - name: msgBuildInfo1
+            - name: msgBuildInfo
           inputSteps:
             - name: msg
         execution:
@@ -316,7 +316,7 @@ pipelines:
         configuration:
           inputResources:
             - name: cpGit
-            - name: msgBuildInfo1
+            - name: msgBuildInfo
           inputSteps:
             - name: msg_clam_scan
         execution:
