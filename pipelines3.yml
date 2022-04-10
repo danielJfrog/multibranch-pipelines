@@ -1,0 +1,54 @@
+template: true
+valuesFilePath: ./values.yml
+
+resources:
+  - name: myPropertyBag1
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag2
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag3
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag4
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag5
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+
+pipelines:
+  - name: testcron2
+    steps:
+      - name: basicly
+        type: Bash
+        execution:
+          onExecute:
+            - echo hi
+      {{ range $i, $e := until 4 }}
+      - name: basic{{$i}}
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag1
+            - name: myPropertyBag2
+            - name: myPropertyBag3
+            - name: myPropertyBag4
+            - name: myPropertyBag5
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      {{ end }}
