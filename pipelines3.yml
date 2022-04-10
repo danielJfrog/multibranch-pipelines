@@ -112,6 +112,21 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: myPropertyBag22
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag23
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag24
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
   - name: templateFS
     type: PropertyBag
     configuration:
@@ -263,8 +278,20 @@ pipelines:
         configuration:
           inputResources:
             - name: templateFS
+            - name: myPropertyBag22
+            - name: myPropertyBag23
           inputSteps:
             - name: template_build
+        execution:
+          onExecute:
+            - echo hi
+      - name: micro_test
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag24
+          inputSteps:
+            - name: micro_build
         execution:
           onExecute:
             - echo hi
