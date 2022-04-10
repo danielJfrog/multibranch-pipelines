@@ -29,7 +29,7 @@ resources:
       runID: 1
 
 pipelines:
-  - name: testcron2
+  - name: testcron3
     steps:
       - name: basicly
         type: Bash
