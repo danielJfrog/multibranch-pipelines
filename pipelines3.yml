@@ -86,7 +86,7 @@ pipelines:
           inputResources:
             - name: myPropertyBag10
           inputSteps:
-            - name: basicly
+            - name: frontend
         execution:
           onExecute:
             - echo hi
