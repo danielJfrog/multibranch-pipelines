@@ -27,7 +27,26 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
-
+  - name: myPropertyBag6
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag7
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag8
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag9
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
 pipelines:
   - name: testcron3
     steps:
@@ -41,6 +60,86 @@ pipelines:
         configuration:
           inputResources:
             - name: myPropertyBag1
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: frontend
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag2
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: msg
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag3
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: vault
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag4
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: template_build
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag5
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: vault_init
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag6
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: postgres
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag7
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: pipelines_router
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag8
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: build_helm_chart
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag9
           inputSteps:
             - name: basicly
         execution:
