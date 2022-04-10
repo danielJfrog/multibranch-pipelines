@@ -97,16 +97,14 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
-  - name: msgBuildInfo2
-    type: PropertyBag
-    configuration:
-      commitSha: 1
-      runID: 1
   - name: msgBuildInfo
     type: BuildInfo
     configuration:
       commitSha: 1
       runID: 1
+      sourceArtifactory: entArt
+        buildName: '${run_id}'
+        buildNumber: '${run_id}'
 pipelines:
   - name: testcron3
     steps:
@@ -122,6 +120,8 @@ pipelines:
             - name: myPropertyBag1
           inputSteps:
             - name: basicly
+          integrations:
+            - name: entArt
         execution:
           onExecute:
             - echo hi
