@@ -72,6 +72,16 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: myPropertyBag15
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag16
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
 pipelines:
   - name: testcron3
     steps:

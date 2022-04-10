@@ -69,11 +69,6 @@ pipelines:
             - name: myPropertyBag3
             - name: myPropertyBag4
             - name: myPropertyBag5
-            - name: myPropertyBag6
-            - name: myPropertyBag7
-            - name: myPropertyBag8
-            - name: myPropertyBag9
-            - name: myPropertyBag10
           inputSteps:
             - name: basicly
         execution:
