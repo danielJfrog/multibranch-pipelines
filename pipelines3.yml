@@ -92,6 +92,11 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: cpGit
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
 pipelines:
   - name: testcron3
     steps:
@@ -251,6 +256,16 @@ pipelines:
         execution:
           onExecute:
             - echo hi
+      - name: www_clam_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag16
+          inputSteps:
+            - name: postgres_publish
+        execution:
+          onExecute:
+            - echo hi
       - name: pipelines_router
         type: Bash
         configuration:
@@ -276,6 +291,16 @@ pipelines:
         configuration:
           inputResources:
             - name: myPropertyBag9
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: trigger_post_release
+        type: Bash
+        configuration:
+          inputResources:
+            - name: cpGit
           inputSteps:
             - name: basicly
         execution:
