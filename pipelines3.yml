@@ -98,11 +98,10 @@ resources:
       commitSha: 1
       runID: 1
   - name: msgBuildInfo
-    type: BuildInfo
+    type: PropertyBag
     configuration:
-      sourceArtifactory: entArt
-      buildName: '${run_id}'
-      buildNumber: '${run_id}'
+      commitSha: 1
+      runID: 1
 pipelines:
   - name: testcron3
     steps:
@@ -168,7 +167,7 @@ pipelines:
         type: Bash
         configuration:
           outputResources:
-            - name: msgBuildInfo
+            - name: msg
           inputSteps:
             - name: msg
         execution:
@@ -319,7 +318,7 @@ pipelines:
         configuration:
           inputResources:
             - name: cpGit
-            - name: msgBuildInfo
+            - name: msg
           inputSteps:
             - name: msg_clam_scan
         execution:
