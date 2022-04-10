@@ -160,12 +160,22 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag11
+            - name: msgBuildInfo
           inputSteps:
             - name: msg
         execution:
           onExecute:
             - echo hi
+      - name: msg_clam_scan
+          type: Bash
+          configuration:
+            inputResources:
+              - name: cpGit
+            inputSteps:
+              - name: msg_publish
+          execution:
+            onExecute:
+              - echo hi
       - name: redis
         type: Bash
         configuration:
@@ -301,8 +311,9 @@ pipelines:
         configuration:
           inputResources:
             - name: cpGit
+            - name: msgBuildInfo
           inputSteps:
-            - name: basicly
+            - name: msg_clam_scan
         execution:
           onExecute:
             - echo hi
