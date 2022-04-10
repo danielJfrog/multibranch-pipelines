@@ -167,7 +167,7 @@ pipelines:
           inputResources:
             - name: msgBuildInfo1
           outputResources:
-            - name: msgBuildInfo
+            - name: msgBuildInfo1
           inputSteps:
             - name: msg
         execution:
@@ -318,7 +318,7 @@ pipelines:
         configuration:
           inputResources:
             - name: cpGit
-            - name: msgBuildInfo
+            - name: msgBuildInfo1
           inputSteps:
             - name: msg_clam_scan
         execution:
