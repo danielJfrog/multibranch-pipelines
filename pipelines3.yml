@@ -102,6 +102,9 @@ pipelines:
             - name: myPropertyBag3
           inputSteps:
             - name: basicly
+        execution:
+          onExecute:
+            - echo hi
       - name: msg_publish
         type: Bash
         configuration:
