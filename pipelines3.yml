@@ -36,8 +36,7 @@ pipelines:
         execution:
           onExecute:
             - echo hi
-      {{ range $i, $e := until 4 }}
-      - name: basic{{$i}}
+      - name: basic2
         type: Bash
         configuration:
           inputResources:
@@ -51,4 +50,3 @@ pipelines:
         execution:
           onExecute:
             - echo hi
-      {{ end }}
