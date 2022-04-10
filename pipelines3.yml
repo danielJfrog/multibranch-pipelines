@@ -82,6 +82,11 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: myPropertyBag17
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
 pipelines:
   - name: testcron3
     steps:
@@ -235,6 +240,16 @@ pipelines:
         configuration:
           inputResources:
             - name: myPropertyBag8
+          inputSteps:
+            - name: basicly
+        execution:
+          onExecute:
+            - echo hi
+      - name: pipelines_router_publish
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag17
           inputSteps:
             - name: basicly
         execution:
