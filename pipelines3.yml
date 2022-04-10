@@ -47,7 +47,7 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag10
+  - name: frontendGit
     type: PropertyBag
     configuration:
       commitSha: 1
@@ -87,6 +87,11 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: frontendBuildInfo
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
 pipelines:
   - name: testcron3
     steps:
@@ -119,7 +124,18 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag10
+            - name: frontendGit
+            - name: frontendBuildInfo
+          inputSteps:
+            - name: frontend
+        execution:
+          onExecute:
+            - echo hi
+      - name: frontend_sonar_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: frontendGit
           inputSteps:
             - name: frontend
         execution:
