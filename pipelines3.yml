@@ -135,16 +135,6 @@ pipelines:
         execution:
           onExecute:
             - echo hi
-      - name: redis
-        type: Bash
-        configuration:
-          inputResources:
-            - name: myPropertyBag12
-          inputSteps:
-            - name: basicly
-        execution:
-          onExecute:
-            - echo hi
       - name: redis_publish
         type: Bash
         configuration:
