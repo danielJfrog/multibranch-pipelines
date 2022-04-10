@@ -77,6 +77,9 @@ pipelines:
             - name: myPropertyBag2
           inputSteps:
             - name: basicly
+        execution:
+          onExecute:
+            - echo hi
       - name: frontend_publish
         type: Bash
         configuration:
