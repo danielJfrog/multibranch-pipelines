@@ -107,6 +107,11 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: templateFS
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
 pipelines:
   - name: testcron4
     steps:
@@ -233,6 +238,18 @@ pipelines:
             - name: myPropertyBag20
           inputSteps:
             - name: vault_publish
+        execution:
+          onExecute:
+            - echo hi
+      - name: template_build
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag5
+          outputResources:
+            - name: templateFS
+          inputSteps:
+            - name: basicly
         execution:
           onExecute:
             - echo hi
