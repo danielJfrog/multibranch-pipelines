@@ -167,15 +167,15 @@ pipelines:
           onExecute:
             - echo hi
       - name: msg_clam_scan
-          type: Bash
-          configuration:
-            inputResources:
-              - name: cpGit
-            inputSteps:
-              - name: msg_publish
-          execution:
-            onExecute:
-              - echo hi
+        type: Bash
+        configuration:
+          inputResources:
+            - name: cpGit
+          inputSteps:
+            - name: msg_publish
+        execution:
+          onExecute:
+            - echo hi
       - name: redis
         type: Bash
         configuration:
