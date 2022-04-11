@@ -263,7 +263,7 @@ resources:
       commitSha: 1
       runID: 1
 pipelines:
-  - name: pipe5
+  - name: pipeline5
     steps:
       - name: trigger_controlplane_builds
         type: Bash
