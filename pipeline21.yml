@@ -263,8 +263,8 @@ resources:
       commitSha: 1
       runID: 1
 pipelines:
-{{ range $i, $e := until 50 }}
-  - name: Pipe21a{{$i}}
+{{ range $i, $e := until 65 }}
+  - name: Pipe21b{{$i}}
     steps:
       - name: trigger_controlplane_builds
         type: Bash
