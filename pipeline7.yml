@@ -2,273 +2,268 @@ template: true
 valuesFilePath: ./values.yml
 
 resources:
-  - name: myPropertyBag1
+  - name: myPropertyBag1Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag2
+  - name: myPropertyBag2Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag3
+  - name: myPropertyBag3Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag4
+  - name: myPropertyBag4Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag5
+  - name: myPropertyBag5Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag6
+  - name: myPropertyBag6Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag7
+  - name: myPropertyBag7Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag8
+  - name: myPropertyBag8Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag9
+  - name: myPropertyBag9Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: frontendGit
+  - name: frontendGitPipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag11
+  - name: myPropertyBag12Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag12
+  - name: redisBuildInfoPipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: redisBuildInfo
+  - name: wwwGitPipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: wwwGit
+  - name: vaultInitBuildInfoPipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: vaultInitBuildInfo
+  - name: myPropertyBag16Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag16
+  - name: myPropertyBag17Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag17
+  - name: frontendBuildInfoPipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: frontendBuildInfo
+  - name: cpGitPipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: cpGit
+  - name: msgPipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: msg
+  - name: myPropertyBag20Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag20
+  - name: myPropertyBag21Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag21
+  - name: myPropertyBag22Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag22
+  - name: myPropertyBag23Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag23
+  - name: myPropertyBag24Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag24
+  - name: myPropertyBag28Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag28
+  - name: myPropertyBag29Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag29
+  - name: myPropertyBag30Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag30
+  - name: myPropertyBag31Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag31
+  - name: myPropertyBag32Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag32
+  - name: myPropertyBag33Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag33
+  - name: myPropertyBag34Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag34
+  - name: myPropertyBag35Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag35
+  - name: myPropertyBag36Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag36
+  - name: myPropertyBag37Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag37
+  - name: myPropertyBag38Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag38
+  - name: myPropertyBag39Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag39
+  - name: myPropertyBag40Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag40
+  - name: myPropertyBag41Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag41
+  - name: myPropertyBag42Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag42
+  - name: myPropertyBag43Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag43
+  - name: myPropertyBag44Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag44
+  - name: myPropertyBag45Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag45
+  - name: myPropertyBag46Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag46
+  - name: myPropertyBag47Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag47
+  - name: myPropertyBag48Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag48
+  - name: myPropertyBag49Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag49
+  - name: myPropertyBag50Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag50
+  - name: myPropertyBag51Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag51
+  - name: myPropertyBag52Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag52
+  - name: myPropertyBag53Pipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: myPropertyBag53
+  - name: microGitPipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
-  - name: microGit
-    type: PropertyBag
-    configuration:
-      commitSha: 1
-      runID: 1
-  - name: templateFS
+  - name: templateFSPipe7
     type: PropertyBag
     configuration:
       commitSha: 1
       runID: 1
 pipelines:
-  - name: pipeline7
+  - name: pipeline6
     steps:
       - name: trigger_controlplane_builds
         type: Bash
@@ -279,7 +274,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag1
+            - name: myPropertyBag1Pipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -289,7 +284,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag2
+            - name: myPropertyBag2Pipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -299,8 +294,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: frontendGit
-            - name: frontendBuildInfo
+            - name: frontendGitPipe7
+            - name: frontendBuildInfoPipe7
           inputSteps:
             - name: frontend
         execution:
@@ -310,17 +305,17 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: frontendGit
+            - name: frontendGitPipe7
           inputSteps:
             - name: frontend
         execution:
           onExecute:
             - echo hi
-      - name: msg
+      - name: msgPipe7
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag3
+            - name: myPropertyBag3Pipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -330,9 +325,9 @@ pipelines:
         type: Bash
         configuration:
           outputResources:
-            - name: msg
+            - name: msgPipe7
           inputSteps:
-            - name: msg
+            - name: msgPipe7
         execution:
           onExecute:
             - echo hi
@@ -340,7 +335,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: cpGit
+            - name: cpGitPipe7
           inputSteps:
             - name: msg_publish
         execution:
@@ -350,7 +345,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag12
+            - name: myPropertyBag12Pipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -360,7 +355,7 @@ pipelines:
         type: Bash
         configuration:
           outputResources:
-            - name: redisBuildInfo
+            - name: redisBuildInfoPipe7
           inputSteps:
             - name: redis
         execution:
@@ -370,7 +365,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag4
+            - name: myPropertyBag4Pipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -380,7 +375,7 @@ pipelines:
         type: Bash
         configuration:
           outputResources:
-            - name: wwwGit
+            - name: wwwGitPipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -390,7 +385,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag20
+            - name: myPropertyBag20Pipe7
           inputSteps:
             - name: vault_publish
         execution:
@@ -400,9 +395,9 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag5
+            - name: myPropertyBag5Pipe7
           outputResources:
-            - name: templateFS
+            - name: templateFSPipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -412,10 +407,10 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: templateFS
-            - name: myPropertyBag22
-            - name: myPropertyBag23
-            - name: microGit
+            - name: templateFSPipe7
+            - name: myPropertyBag22Pipe7
+            - name: myPropertyBag23Pipe7
+            - name: microGitPipe7
           inputSteps:
             - name: template_build
         execution:
@@ -425,7 +420,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag24
+            - name: myPropertyBag24Pipe7
           inputSteps:
             - name: micro_build
         execution:
@@ -435,7 +430,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: microGit
+            - name: microGitPipe7
           inputSteps:
             - name: micro_test
         execution:
@@ -445,7 +440,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag21
+            - name: myPropertyBag21Pipe7
           inputSteps:
             - name: template_build
         execution:
@@ -455,7 +450,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag6
+            - name: myPropertyBag6Pipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -465,7 +460,7 @@ pipelines:
         type: Bash
         configuration:
           outputResources:
-            - name: vaultInitBuildInfo
+            - name: vaultInitBuildInfoPipe7
           inputSteps:
             - name: vault_init
         execution:
@@ -475,16 +470,16 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag28
-            - name: myPropertyBag29
-            - name: myPropertyBag30
-            - name: myPropertyBag31
-            - name: myPropertyBag32
-            - name: myPropertyBag33
-            - name: myPropertyBag34
-            - name: myPropertyBag35
-            - name: myPropertyBag36
-            - name: myPropertyBag37
+            - name: myPropertyBag28Pipe7
+            - name: myPropertyBag29Pipe7
+            - name: myPropertyBag30Pipe7
+            - name: myPropertyBag31Pipe7
+            - name: myPropertyBag32Pipe7
+            - name: myPropertyBag33Pipe7
+            - name: myPropertyBag34Pipe7
+            - name: myPropertyBag35Pipe7
+            - name: myPropertyBag36Pipe7
+            - name: myPropertyBag37Pipe7
           inputSteps:
             - name: vault_init_publish
         execution:
@@ -494,7 +489,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag38
+            - name: myPropertyBag38Pipe7
           inputSteps:
             - name: inst_build
         execution:
@@ -504,8 +499,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag39
-            - name: myPropertyBag40
+            - name: myPropertyBag39Pipe7
+            - name: myPropertyBag40Pipe7
           inputSteps:
             - name: inst_clam_scan
         execution:
@@ -515,7 +510,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag7
+            - name: myPropertyBag7Pipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -525,7 +520,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag16
+            - name: myPropertyBag16Pipe7
           inputSteps:
             - name: postgres
         execution:
@@ -535,7 +530,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag43
+            - name: myPropertyBag43Pipe7
           inputSteps:
             - name: postgres_publish
         execution:
@@ -545,7 +540,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag16
+            - name: myPropertyBag16Pipe7
           inputSteps:
             - name: www_publish
         execution:
@@ -555,7 +550,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag8
+            - name: myPropertyBag8Pipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -565,7 +560,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag17
+            - name: myPropertyBag17Pipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -575,7 +570,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag9
+            - name: myPropertyBag9Pipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -585,8 +580,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag41
-            - name: myPropertyBag42
+            - name: myPropertyBag41Pipe7
+            - name: myPropertyBag42Pipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -596,8 +591,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag41
-            - name: myPropertyBag42
+            - name: myPropertyBag41Pipe7
+            - name: myPropertyBag42Pipe7
           inputSteps:
             - name: www
         execution:
@@ -607,15 +602,15 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag44
-            - name: myPropertyBag45
-            - name: myPropertyBag46
-            - name: myPropertyBag47
-            - name: myPropertyBag48
-            - name: myPropertyBag49
-            - name: myPropertyBag50
-            - name: myPropertyBag51
-            - name: myPropertyBag52
+            - name: myPropertyBag44Pipe7
+            - name: myPropertyBag45Pipe7
+            - name: myPropertyBag46Pipe7
+            - name: myPropertyBag47Pipe7
+            - name: myPropertyBag48Pipe7
+            - name: myPropertyBag49Pipe7
+            - name: myPropertyBag50Pipe7
+            - name: myPropertyBag51Pipe7
+            - name: myPropertyBag52Pipe7
           inputSteps:
             - name: trigger_controlplane_builds
         execution:
@@ -625,7 +620,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myPropertyBag53
+            - name: myPropertyBag53Pipe7
           inputSteps:
             - name: api_build
         execution:
@@ -635,11 +630,11 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: cpGit
-            - name: msg
-            - name: redisBuildInfo
-            - name: vaultInitBuildInfo
-            - name: wwwGit
+            - name: cpGitPipe7
+            - name: msgPipe7
+            - name: redisBuildInfoPipe7
+            - name: vaultInitBuildInfoPipe7
+            - name: wwwGitPipe7
           inputSteps:
             - name: msg_clam_scan
             - name: vault_clam_scan
