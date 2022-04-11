@@ -1,0 +1,651 @@
+template: true
+valuesFilePath: ./values.yml
+
+resources:
+  - name: myPropertyBag1
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag2
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag3
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag4
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag5
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag6
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag7
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag8
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag9
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: frontendGit
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag11
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag12
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: redisBuildInfo
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: wwwGit
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: vaultInitBuildInfo
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag16
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag17
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: frontendBuildInfo
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: cpGit
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: msg
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag20
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag21
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag22
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag23
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag24
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag28
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag29
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag30
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag31
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag32
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag33
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag34
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag35
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag36
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag37
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag38
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag39
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag40
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag41
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag42
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag43
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag44
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag45
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag46
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag47
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag48
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag49
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag50
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag51
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag52
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag53
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: microGit
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: templateFS
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+pipelines:
+  - name: pipeline7
+    steps:
+      - name: trigger_controlplane_builds
+        type: Bash
+        execution:
+          onExecute:
+            - echo hi
+      - name: automation_e2e_build
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag1
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: frontend
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag2
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: frontend_publish
+        type: Bash
+        configuration:
+          inputResources:
+            - name: frontendGit
+            - name: frontendBuildInfo
+          inputSteps:
+            - name: frontend
+        execution:
+          onExecute:
+            - echo hi
+      - name: frontend_sonar_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: frontendGit
+          inputSteps:
+            - name: frontend
+        execution:
+          onExecute:
+            - echo hi
+      - name: msg
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag3
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: msg_publish
+        type: Bash
+        configuration:
+          outputResources:
+            - name: msg
+          inputSteps:
+            - name: msg
+        execution:
+          onExecute:
+            - echo hi
+      - name: msg_clam_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: cpGit
+          inputSteps:
+            - name: msg_publish
+        execution:
+          onExecute:
+            - echo hi
+      - name: redis
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag12
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: redis_publish
+        type: Bash
+        configuration:
+          outputResources:
+            - name: redisBuildInfo
+          inputSteps:
+            - name: redis
+        execution:
+          onExecute:
+            - echo hi
+      - name: vault
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag4
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: vault_publish
+        type: Bash
+        configuration:
+          outputResources:
+            - name: wwwGit
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: vault_clam_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag20
+          inputSteps:
+            - name: vault_publish
+        execution:
+          onExecute:
+            - echo hi
+      - name: template_build
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag5
+          outputResources:
+            - name: templateFS
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: micro_build
+        type: Bash
+        configuration:
+          inputResources:
+            - name: templateFS
+            - name: myPropertyBag22
+            - name: myPropertyBag23
+            - name: microGit
+          inputSteps:
+            - name: template_build
+        execution:
+          onExecute:
+            - echo hi
+      - name: micro_test
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag24
+          inputSteps:
+            - name: micro_build
+        execution:
+          onExecute:
+            - echo hi
+      - name: micro_sonar_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: microGit
+          inputSteps:
+            - name: micro_test
+        execution:
+          onExecute:
+            - echo hi
+      - name: template_sonar_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag21
+          inputSteps:
+            - name: template_build
+        execution:
+          onExecute:
+            - echo hi
+      - name: vault_init
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag6
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: vault_init_publish
+        type: Bash
+        configuration:
+          outputResources:
+            - name: vaultInitBuildInfo
+          inputSteps:
+            - name: vault_init
+        execution:
+          onExecute:
+            - echo hi
+      - name: inst_build
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag28
+            - name: myPropertyBag29
+            - name: myPropertyBag30
+            - name: myPropertyBag31
+            - name: myPropertyBag32
+            - name: myPropertyBag33
+            - name: myPropertyBag34
+            - name: myPropertyBag35
+            - name: myPropertyBag36
+            - name: myPropertyBag37
+          inputSteps:
+            - name: vault_init_publish
+        execution:
+          onExecute:
+            - echo hi
+      - name: inst_clam_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag38
+          inputSteps:
+            - name: inst_build
+        execution:
+          onExecute:
+            - echo hi
+      - name: create_snapshot_branch
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag39
+            - name: myPropertyBag40
+          inputSteps:
+            - name: inst_clam_scan
+        execution:
+          onExecute:
+            - echo hi
+      - name: postgres
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag7
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: postgres_publish
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag16
+          inputSteps:
+            - name: postgres
+        execution:
+          onExecute:
+            - echo hi
+      - name: postgres_clam_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag43
+          inputSteps:
+            - name: postgres_publish
+        execution:
+          onExecute:
+            - echo hi
+      - name: www_clam_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag16
+          inputSteps:
+            - name: www_publish
+        execution:
+          onExecute:
+            - echo hi
+      - name: pipelines_router
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag8
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: pipelines_router_publish
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag17
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: build_helm_chart
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag9
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: www
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag41
+            - name: myPropertyBag42
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: www_publish
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag41
+            - name: myPropertyBag42
+          inputSteps:
+            - name: www
+        execution:
+          onExecute:
+            - echo hi
+      - name: api_build
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag44
+            - name: myPropertyBag45
+            - name: myPropertyBag46
+            - name: myPropertyBag47
+            - name: myPropertyBag48
+            - name: myPropertyBag49
+            - name: myPropertyBag50
+            - name: myPropertyBag51
+            - name: myPropertyBag52
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: api_clam_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag53
+          inputSteps:
+            - name: api_build
+        execution:
+          onExecute:
+            - echo hi
+      - name: trigger_post_release
+        type: Bash
+        configuration:
+          inputResources:
+            - name: cpGit
+            - name: msg
+            - name: redisBuildInfo
+            - name: vaultInitBuildInfo
+            - name: wwwGit
+          inputSteps:
+            - name: msg_clam_scan
+            - name: vault_clam_scan
+            - name: micro_sonar_scan
+            - name: www_clam_scan
+            - name: api_clam_scan
+        execution:
+          onExecute:
+            - echo hi
