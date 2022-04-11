@@ -177,6 +177,21 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: myPropertyBag38
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag39
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag40
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
   - name: microGit
     type: PropertyBag
     configuration:
@@ -407,6 +422,27 @@ pipelines:
             - name: myPropertyBag37
           inputSteps:
             - name: vault_init_publish
+        execution:
+          onExecute:
+            - echo hi
+      - name: inst_clam_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag38
+          inputSteps:
+            - name: inst_build
+        execution:
+          onExecute:
+            - echo hi
+      - name: create_snapshot_branch
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag39
+            - name: myPropertyBag40
+          inputSteps:
+            - name: inst_clam_scan
         execution:
           onExecute:
             - echo hi
