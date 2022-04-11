@@ -252,6 +252,11 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: myPropertyBag53
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
   - name: microGit
     type: PropertyBag
     configuration:
