@@ -127,6 +127,61 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: myPropertyBag28
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag29
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag30
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag31
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag32
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag33
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag34
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag35
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag36
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag37
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: microGit
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
   - name: templateFS
     type: PropertyBag
     configuration:
@@ -280,6 +335,7 @@ pipelines:
             - name: templateFS
             - name: myPropertyBag22
             - name: myPropertyBag23
+            - name: microGit
           inputSteps:
             - name: template_build
         execution:
@@ -292,6 +348,16 @@ pipelines:
             - name: myPropertyBag24
           inputSteps:
             - name: micro_build
+        execution:
+          onExecute:
+            - echo hi
+      - name: micro_sonar_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: microGit
+          inputSteps:
+            - name: micro_test
         execution:
           onExecute:
             - echo hi
@@ -322,6 +388,25 @@ pipelines:
             - name: vaultInitBuildInfo
           inputSteps:
             - name: vault_init
+        execution:
+          onExecute:
+            - echo hi
+      - name: inst_build
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag28
+            - name: myPropertyBag29
+            - name: myPropertyBag30
+            - name: myPropertyBag31
+            - name: myPropertyBag32
+            - name: myPropertyBag33
+            - name: myPropertyBag34
+            - name: myPropertyBag35
+            - name: myPropertyBag36
+            - name: myPropertyBag37
+          inputSteps:
+            - name: vault_init_publish
         execution:
           onExecute:
             - echo hi
@@ -397,6 +482,7 @@ pipelines:
           inputSteps:
             - name: msg_clam_scan
             - name: vault_clam_scan
+            - name: micro_sonar_scan
         execution:
           onExecute:
             - echo hi
