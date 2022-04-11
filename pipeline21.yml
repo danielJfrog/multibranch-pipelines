@@ -264,7 +264,7 @@ resources:
       runID: 1
 pipelines:
 {{ range $i, $e := until 70 }}
-  - name: Pipe21{{$i}}
+  - name: Pipe21a{{$i}}
     steps:
       - name: trigger_controlplane_builds
         type: Bash
