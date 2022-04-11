@@ -262,8 +262,8 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
-{{ range $i, $e := until 4 }}
 pipelines:
+{{ range $i, $e := until 4 }}
   - name: Pipe21{{$i}}
     steps:
       - name: trigger_controlplane_builds
