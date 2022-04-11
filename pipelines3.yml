@@ -192,6 +192,66 @@ resources:
     configuration:
       commitSha: 1
       runID: 1
+  - name: myPropertyBag41
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag42
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag43
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag44
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag45
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag46
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag47
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag48
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag49
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag50
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag51
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
+  - name: myPropertyBag52
+    type: PropertyBag
+    configuration:
+      commitSha: 1
+      runID: 1
   - name: microGit
     type: PropertyBag
     configuration:
@@ -205,7 +265,7 @@ resources:
 pipelines:
   - name: testcron4
     steps:
-      - name: basicly
+      - name: trigger_controlplane_builds
         type: Bash
         execution:
           onExecute:
@@ -216,7 +276,7 @@ pipelines:
           inputResources:
             - name: myPropertyBag1
           inputSteps:
-            - name: basicly
+            - name: trigger_controlplane_builds
         execution:
           onExecute:
             - echo hi
@@ -226,7 +286,7 @@ pipelines:
           inputResources:
             - name: myPropertyBag2
           inputSteps:
-            - name: basicly
+            - name: trigger_controlplane_builds
         execution:
           onExecute:
             - echo hi
@@ -257,7 +317,7 @@ pipelines:
           inputResources:
             - name: myPropertyBag3
           inputSteps:
-            - name: basicly
+            - name: trigger_controlplane_builds
         execution:
           onExecute:
             - echo hi
@@ -287,7 +347,7 @@ pipelines:
           inputResources:
             - name: myPropertyBag12
           inputSteps:
-            - name: basicly
+            - name: trigger_controlplane_builds
         execution:
           onExecute:
             - echo hi
@@ -307,7 +367,7 @@ pipelines:
           inputResources:
             - name: myPropertyBag4
           inputSteps:
-            - name: basicly
+            - name: trigger_controlplane_builds
         execution:
           onExecute:
             - echo hi
@@ -317,7 +377,7 @@ pipelines:
           outputResources:
             - name: wwwGit
           inputSteps:
-            - name: basicly
+            - name: trigger_controlplane_builds
         execution:
           onExecute:
             - echo hi
@@ -339,7 +399,7 @@ pipelines:
           outputResources:
             - name: templateFS
           inputSteps:
-            - name: basicly
+            - name: trigger_controlplane_builds
         execution:
           onExecute:
             - echo hi
@@ -392,7 +452,7 @@ pipelines:
           inputResources:
             - name: myPropertyBag6
           inputSteps:
-            - name: basicly
+            - name: trigger_controlplane_builds
         execution:
           onExecute:
             - echo hi
@@ -452,7 +512,7 @@ pipelines:
           inputResources:
             - name: myPropertyBag7
           inputSteps:
-            - name: basicly
+            - name: trigger_controlplane_builds
         execution:
           onExecute:
             - echo hi
@@ -466,13 +526,23 @@ pipelines:
         execution:
           onExecute:
             - echo hi
+      - name: postgres_clam_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag43
+          inputSteps:
+            - name: postgres_publish
+        execution:
+          onExecute:
+            - echo hi
       - name: www_clam_scan
         type: Bash
         configuration:
           inputResources:
             - name: myPropertyBag16
           inputSteps:
-            - name: postgres_publish
+            - name: www_publish
         execution:
           onExecute:
             - echo hi
@@ -482,7 +552,7 @@ pipelines:
           inputResources:
             - name: myPropertyBag8
           inputSteps:
-            - name: basicly
+            - name: trigger_controlplane_builds
         execution:
           onExecute:
             - echo hi
@@ -492,7 +562,7 @@ pipelines:
           inputResources:
             - name: myPropertyBag17
           inputSteps:
-            - name: basicly
+            - name: trigger_controlplane_builds
         execution:
           onExecute:
             - echo hi
@@ -502,7 +572,57 @@ pipelines:
           inputResources:
             - name: myPropertyBag9
           inputSteps:
-            - name: basicly
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: www
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag41
+            - name: myPropertyBag42
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: www_publish
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag41
+            - name: myPropertyBag42
+          inputSteps:
+            - name: www
+        execution:
+          onExecute:
+            - echo hi
+      - name: api_build
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag44
+            - name: myPropertyBag45
+            - name: myPropertyBag46
+            - name: myPropertyBag47
+            - name: myPropertyBag48
+            - name: myPropertyBag49
+            - name: myPropertyBag50
+            - name: myPropertyBag51
+            - name: myPropertyBag52
+          inputSteps:
+            - name: trigger_controlplane_builds
+        execution:
+          onExecute:
+            - echo hi
+      - name: api_clam_scan
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myPropertyBag53
+          inputSteps:
+            - name: api_build
         execution:
           onExecute:
             - echo hi
@@ -519,6 +639,8 @@ pipelines:
             - name: msg_clam_scan
             - name: vault_clam_scan
             - name: micro_sonar_scan
+            - name: www_clam_scan
+            - name: api_clam_scan
         execution:
           onExecute:
             - echo hi
