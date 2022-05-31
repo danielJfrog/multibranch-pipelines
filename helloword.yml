@@ -22,6 +22,7 @@ pipelines:
           onExecute:
             # Data from input resources is available as env variables in the step
             - echo $res_myFirstRepo_commitSha
+            - sleep 20m
       - name: p1_s2
         type: Bash
         configuration:
